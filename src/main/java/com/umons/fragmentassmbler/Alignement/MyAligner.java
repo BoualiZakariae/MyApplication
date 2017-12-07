@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author bouali
+ * @author bouali From Eclipse
  */
 public class MyAligner implements Aligner {
 
