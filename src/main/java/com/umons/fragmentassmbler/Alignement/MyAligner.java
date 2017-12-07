@@ -22,7 +22,7 @@ public class MyAligner implements Aligner {
 
     public  MyAligner() {
         alignement = null;
-        alignementMatrix = null;
+       // alignementMatrix = null;
         row = 0;
         column = 0;
     }
@@ -115,7 +115,7 @@ public class MyAligner implements Aligner {
 
     @Override
     public AlignementMatrix getAlignementMatrix(String S, String T) {
-        alignementMatrix = new AlignementMatrix(S, T);
+        AlignementMatrix alignementMatrix = new AlignementMatrix(S, T);
         alignementMatrix.fill();
         return alignementMatrix;
     }
@@ -128,7 +128,7 @@ public class MyAligner implements Aligner {
      */
     @Override
     public int CostOfSemiGlobalAlignement(String S, String T) {
-        alignementMatrix = getAlignementMatrix(S, T);
+        AlignementMatrix  alignementMatrix = getAlignementMatrix(S, T);
         alignementMatrix.calculateMaximumScore();
         return alignementMatrix.getMaximumScore();
     }
@@ -141,9 +141,10 @@ public class MyAligner implements Aligner {
        
         String S =  F1.getSequence().toString();
         String T =  F1.getSequence().toString();
-        alignementMatrix = getAlignementMatrix(S,T);
-        alignementMatrix.calculateMaximumScore();
-        return alignementMatrix.getMaximumScore();
+      //  alignementMatrix = getAlignementMatrix(S,T);
+        //alignementMatrix.calculateMaximumScore();
+        //return alignementMatrix.getMaximumScore();
+        return 0;
     }
     
     

@@ -10,7 +10,9 @@ import com.umons.fragmentassmbler.Util.Util;
 
 /**
  *
- * @author bouali
+ Cet Classe represente un objet de type Alignement semi-global
+ * 
+ * 
  */
 public class Alignement {
 
@@ -30,7 +32,6 @@ public class Alignement {
       margin=3;
      */
     private int margin;
-
     private boolean SOverT = true;
     private int startPositionOfS = 0;
     private int startPositionOfT = 0;

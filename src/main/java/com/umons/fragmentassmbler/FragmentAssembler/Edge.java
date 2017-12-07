@@ -16,7 +16,7 @@ public class Edge implements Comparable<Edge> {
      *
      */
     public Edge() {
-        this.alignement = new Alignement();
+        //this.alignement = new Alignement();
     }
 
     /**

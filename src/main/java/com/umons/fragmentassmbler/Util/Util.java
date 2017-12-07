@@ -59,10 +59,13 @@ public class Util {
     }
     
     
-    
+    static int  a =0;
     private static Edge CREATEEDGE(Fragment f1 , Fragment f2) {
         Aligner alig = new MyAligner();//added
         int weight = alig.CostOfSemiGlobalAlignement(f1.getSequence().toString(),f2.getSequence().toString());
+       // if(a>90000000)
+         //   System.out.println(++a+"");
+        alig = null;
         Edge edge = new Edge(f1, f2, weight);
         return edge;
     }
@@ -77,6 +80,7 @@ public class Util {
         T = listOfFragments.get(j);
         Aligner alig = new MyAligner();//added
         int weight = alig.CostOfSemiGlobalAlignement(S.getSequence().toString(),T.getSequence().toString());
+        alig = null;
         Edge edge = new Edge(S, T, weight);
         return edge;
     }

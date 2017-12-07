@@ -33,7 +33,7 @@ public class FragmentAssembler {
      */
     public void run(File file, String pathToSaveTarget) {
         readFastaFile(file);
-        edgesConstruction();//multithreading
+        edgesConstruction();
         greedyAlgorithm();
         alignementStage();
         gapsPropagationStage();
@@ -51,8 +51,7 @@ public class FragmentAssembler {
         hamiltonienGraph = new HamiltonienGraph(listOfEdges);
         hamiltonienGraph.greedyAlgorithm(unionFind);
         hamiltonienGraph.generateTheOrderedEges();
-       // System.out.println("l'hamiltonien path contient  "+hamiltonienGraph.getHamiltonienpath().size()+ " Arcs");
-
+     
     }
 
     /*
@@ -91,7 +90,7 @@ public class FragmentAssembler {
     }
 
     private void readFastaFile(File file) {
-        System.out.println("reaing File FAsta");
+        System.out.println("redaing File FAsta");
         this.parseFile(file);
     }
 
@@ -102,7 +101,7 @@ public class FragmentAssembler {
      java -jar FragmentAssembler.jar <fichier.fasta> –out  <sortie.fasta>
      */
     public static void main(String args[]) {
-        System.out.println(args.length);
+       // System.out.println(args.length);
         String fastaFilePath = args[0];
         String targetFilePath = args[1];
         File fastaFile = new File(fastaFilePath);

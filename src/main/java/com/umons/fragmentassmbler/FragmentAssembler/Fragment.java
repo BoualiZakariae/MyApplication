@@ -6,7 +6,8 @@ package com.umons.fragmentassmbler.FragmentAssembler;
  */
 public class Fragment {
     private int Id;/*Frgament Identifier*/
-    private StringBuilder sequence = new StringBuilder();
+   /// private StringBuilder sequence = new StringBuilder();
+       private StringBuilder sequence ;
 
     /**
      *
